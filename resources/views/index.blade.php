@@ -14,7 +14,7 @@
             $nameRejisor=\DB::table('rejisors')->where('id', $rejisorId)->first();
         @endphp
         <td> {{$nameCategory}}</td>
-        <td> {{$nameRejisor}}</td>
+        <td> {{$nameRejisor->name}}</td>
     </tr>
     @endforeach
 </table>

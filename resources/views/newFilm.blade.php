@@ -17,7 +17,7 @@
     <option value="{{ $j }}" > {{ $j }}</option>
     @endfor
 </select>
-    <select>
+    <select name="category">
         @foreach($allCategories as $category)
             {{$categoryName=$category->name}}
             {{$categoryId=$category->id}}
