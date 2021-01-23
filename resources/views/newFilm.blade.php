@@ -9,8 +9,8 @@
     @csrf
 <label>add_film</label>
 <input type="text" name="film" placeholder="film name"><br><br>
-    <label>Rejisor</label>
-    <input type="text" name="rejisor" placeholder="rejisor"><br><br>
+    <label>producer</label>
+    <input type="text" name="producer" placeholder="producer"><br><br>
 <label>year</label>
 <select name="year">
     @for($j=2021;$j>0;$j--)
