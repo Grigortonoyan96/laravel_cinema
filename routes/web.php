@@ -28,6 +28,10 @@ Route::Post('/add', function(){
 
 Route::resource('web',\App\Http\Controllers\cinema\cinemaStarController::class);
 
+Route::match(['get','post'],'/newCategory',function (){
+    return view('add_newCategory');
+});
+
 
 
 
