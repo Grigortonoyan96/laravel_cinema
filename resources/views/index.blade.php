@@ -4,17 +4,17 @@
         <td> {{ $film->name }} </td>
         <td> {{$film->year}}</td>
         <td> {{$film->description}}</td>
-        @php
+       {{-- @php
             $selectFilmCategory=\DB::table('film_category')->where('film_id', $film->id)->first();
             $categoryId=$selectFilmCategory->category_id;
             $selectCategory=\DB::table('categories')->where('id', $categoryId)->first();
             $nameCategory=$selectCategory->name;
-            $selectFilmRejisor=\DB::table('film_rejisor')->where('film_id', $film->id)->first();
-            $rejisorId=$selectFilmRejisor->rejisor_id;
-            $nameRejisor=\DB::table('rejisors')->where('id', $rejisorId)->first();
+            $selectFilmproducer=\DB::table('film_producer')->where('film_id', $film->id)->first();
+            $producerId=$selectFilmproducer->producer_id;
+            $nameproducer=\DB::table('producer')->where('id', $producerId)->first();
         @endphp
         <td> {{$nameCategory}}</td>
-        <td> {{$nameRejisor->name}}</td>
+        <td> {{$nameproducer->name}}</td>--}}
     </tr>
     @endforeach
 </table>
