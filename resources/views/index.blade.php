@@ -6,12 +6,15 @@
         <td> {{$film->description}}</td>
         @php
             $selectFilmCategory=\DB::table('film_category')->where('film_id', $film->id)->first();
-            $category_id=$selectFilmCategory->category_id;
-            $selectCategory=\DB::table('categories')->where('id', $category_id)->first();
+            $categoryId=$selectFilmCategory->category_id;
+            $selectCategory=\DB::table('categories')->where('id', $categoryId)->first();
             $nameCategory=$selectCategory->name;
-
+            $selectFilmRejisor=\DB::table('film_rejisor')->where('film_id', $film->id)->first();
+            $rejisorId=$selectFilmRejisor->rejisor_id;
+            $nameRejisor=\DB::table('rejisors')->where('id', $rejisorId)->first();
         @endphp
         <td> {{$nameCategory}}</td>
+        <td> {{$nameRejisor}}</td>
     </tr>
     @endforeach
 </table>
