@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class FilmRejisor extends Migration
+class FilmProducer extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class FilmRejisor extends Migration
      */
     public function up()
     {
-        Schema::create('film_rejisor', function (Blueprint $table) {
+        Schema::create('film_producer', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('film_id');
-            $table->integer('rejisor_id');
+            $table->integer('producer_id');
         });
     }
 

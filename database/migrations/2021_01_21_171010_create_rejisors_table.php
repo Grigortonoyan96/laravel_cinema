@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRejisorsTable extends Migration
+class CreateProducerTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRejisorsTable extends Migration
      */
     public function up()
     {
-        Schema::create('rejisors', function (Blueprint $table) {
+        Schema::create('producer', function (Blueprint $table) {
             $table->increments('id');
             $table->string('name');
         });
@@ -26,6 +26,6 @@ class CreateRejisorsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rejisors');
+        Schema::dropIfExists('producer');
     }
 }
