@@ -37,11 +37,15 @@ class cinemaStarController extends Controller
      */
     public function store(Request $request)
     {
+
         \DB::insert("insert into films (name, year,description) values ('".$request->film."',
          '".$request->year."','".$request->description."')");
+
+        $producer = \DB::select("select * from producers WHERE name='".$request->producer."'");
+        if(count($producer)<1){
+            \DB::insert("insert into producers (name) values('".$request->producer."')");
+        }
         
-
-
     }
 
     /**
