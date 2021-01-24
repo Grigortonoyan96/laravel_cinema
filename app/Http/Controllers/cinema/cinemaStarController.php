@@ -26,7 +26,7 @@ class cinemaStarController extends Controller
      */
     public function create()
     {
-        dd('create');
+        return view('newFilm');
     }
 
     /**
@@ -37,7 +37,7 @@ class cinemaStarController extends Controller
      */
     public function store(Request $request)
     {
-        dd('store');
+        return $request;
     }
 
     /**
@@ -48,7 +48,7 @@ class cinemaStarController extends Controller
      */
     public function show($id)
     {
-        dd('show');
+
     }
 
     /**
@@ -71,7 +71,7 @@ class cinemaStarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        dd('ubdate');
+
     }
 
     /**

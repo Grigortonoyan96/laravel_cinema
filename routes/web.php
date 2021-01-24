@@ -18,10 +18,9 @@ Route::get('/', function () {
 });
 
 //
+Route::resource('index',\App\Http\Controllers\cinema\cinemaStarController::class);
 
-Route::get('/index', [\App\Http\Controllers\cinema\cinemaStarController::class, 'index']);
-
-
+Route::post('/store',[\App\Http\Controllers\cinema\cinemaStarController::class,'store']);
 
 
 

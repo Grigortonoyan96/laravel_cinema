@@ -5,7 +5,8 @@
     <title>newFilm</title>
 </head>
 <body>
-<form method="Post" action="/add" enctype="multipart/form-data">
+<form method="Post" action="/store" enctype="multipart/form-data">
+
     @csrf
 <label>add_film</label>
 <input type="text" name="film" placeholder="film name"><br><br>
