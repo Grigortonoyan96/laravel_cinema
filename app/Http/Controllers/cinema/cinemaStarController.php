@@ -45,7 +45,13 @@ class cinemaStarController extends Controller
         if(count($producer)<1){
             \DB::insert("insert into producers (name) values('".$request->producer."')");
         }
-        
+        $film = \DB::select("select * from films WHERE name='".$request->film."'");
+        $filmId=$film[0]->id;
+
+        $producerIDSelect = \DB::select("select * from producers WHERE name='".$request->producer."'");
+        $producerId=$producerIDSelect[0]->id;
+        \DB::insert("insert into film_producers (film_id,producer_id) values('".$filmId."',
+        $producerId)");
     }
 
     /**
