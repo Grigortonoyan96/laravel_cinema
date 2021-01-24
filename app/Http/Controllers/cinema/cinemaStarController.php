@@ -52,6 +52,8 @@ class cinemaStarController extends Controller
         $producerId=$producerIDSelect[0]->id;
         \DB::insert("insert into film_producers (film_id,producer_id) values('".$filmId."',
         $producerId)");
+        \DB::insert("insert into film_categories (film_id,category_id) values('".$filmId."',
+        '".$request->category."')");
     }
 
     /**
