@@ -37,7 +37,11 @@ class cinemaStarController extends Controller
      */
     public function store(Request $request)
     {
-        return $request;
+        \DB::insert("insert into films (name, year,description) values ('".$request->film."',
+         '".$request->year."','".$request->description."')");
+        
+
+
     }
 
     /**
