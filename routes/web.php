@@ -18,19 +18,9 @@ Route::get('/', function () {
 });
 
 //
-Route::match(['post','get'],'/add_film', function () {
-    return view('newFilm');
-});
 
-Route::Post('/add', function(){
-    return view('addFilm');
-});
+Route::get('/index', [\App\Http\Controllers\cinema\cinemaStarController::class, 'index']);
 
-Route::resource('web',\App\Http\Controllers\cinema\cinemaStarController::class);
-
-Route::match(['get','post'],'/newCategory',function (){
-    return view('add_newCategory');
-});
 
 
 

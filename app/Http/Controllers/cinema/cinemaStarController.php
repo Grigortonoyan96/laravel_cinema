@@ -26,7 +26,7 @@ class cinemaStarController extends Controller
      */
     public function create()
     {
-        //
+        dd('create');
     }
 
     /**
@@ -37,7 +37,7 @@ class cinemaStarController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        dd('store');
     }
 
     /**
@@ -48,7 +48,7 @@ class cinemaStarController extends Controller
      */
     public function show($id)
     {
-        //
+        dd('show');
     }
 
     /**
@@ -59,7 +59,7 @@ class cinemaStarController extends Controller
      */
     public function edit($id)
     {
-        //
+        dd('edit');
     }
 
     /**
@@ -71,7 +71,7 @@ class cinemaStarController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        dd('ubdate');
     }
 
     /**

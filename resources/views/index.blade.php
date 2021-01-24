@@ -2,8 +2,8 @@
     @foreach($paginator as $film)
     <tr>
         <td> {{ $film->name }} </td>
-        <td> {{$film->year}}</td>
-        <td> {{$film->description}}</td>
+       {{-- <td> {{$film->year}}</td>
+        <td> {{$film->description}}</td>--}}
        {{-- @php
             $selectFilmCategory=\DB::table('film_category')->where('film_id', $film->id)->first();
             $categoryId=$selectFilmCategory->category_id;
